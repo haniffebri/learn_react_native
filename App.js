@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -24,6 +25,8 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
+	  <Image style = {styles.image}
+	  source = {require('./content/gambar/ganteng.jpg')}/>
         <Text style={styles.welcome}>
          Nama : Hanif Febri Nugroho
         </Text>
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'orange',
+    backgroundColor: 'red',
   },
   welcome: {
     fontSize: 20,
@@ -55,4 +58,8 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  image:{
+	  width : 300,
+	  height : 300,
+  }
 });
